@@ -1,0 +1,215 @@
+
+@charset "utf-8";
+/* CSS Document for Training Zone */                                                       /* Inherited properties (main ones): color
+                                                                                                                                font-family, fonr-size, font-style, font-variant, font-weight, font, letter-spacing, 
+                                                                                                                                line-height, orphans, text-align, text-indent, text-transform */
+/* universal selectors                                                                                                          list-style-image, list-style-position, list-style-type, list-style                             
+* {
+    margin: 0;      This has a radical effect on the entire layout!!!!!                                                         N.B. font-size is inherited differently!!!!!
+    padding: 0;                                                                                                                      default font-size is 16px   
+}                                                                                                                                                                                                                             */                                                                                                                                 /*  p { font-size: 80%; } means the p element is 80% of 16 = 12.8px
+/* body styles                                                                                                                         The calculated value of font-size is inherited , not the value itself  
+This will remove any default margins and/or padding in browser.                                                                        i.e. 12.8px is inherited NOT 80%!!! 
+*/
+body {
+    margin: 0;
+    padding: 0;                                             /* ALWAYS set the font-size & font-family in body first!!!!! */
+    font-family: arial, helvetica, sans-serif;               /* font-size & font-family are inherited by ALL descendents */
+    font-size: 90%;                                        /* This is more efficient than repeating font-size & font-family */    
+}                                                           /* for all descendents; BUT this can be overidden for any element by
+/* nav styles */                                            /* specifying a different font-size & font-family for that element */ 
+nav {
+    padding: 2em 2em;                                       /* padding of 1em top & bottom and 2em left & right */
+    color: #333A56;
+    text-align: right;
+    }
+nav ul li {
+    display:inline;
+    margin-right: 5em;
+}
+nav a {
+    color: #333A56;
+    background: #E8E8E8;
+    text-decoration: none;
+    padding: 5px;
+    width: 30em;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 4px;
+}
+nav a:visited {                                             /* looks for any "a' element that has been clicked on by the user */
+    color: #00c4cc;
+} 
+nav a:focus {
+    color: black
+}
+nav a:hover {
+    color: blue;
+}
+nav a:active {
+    color: deepskyblue
+}
+/* link pseudo class selectors
+These are written in the following order:
+a:link
+a:visited
+a:focus
+a:hover
+a:active    
+*/
+a:link {
+                                                        /* looks for any "a' element that is a 'link' i.e. href values */
+}
+a:visited {                                             /* looks for any "a' element that has been clicked on by the user */
+     
+}
+a:focus {                                               /* styles any element in focus i.e. user has tabbed to that element; important for keyboard users!!! */
+   
+}
+a:hover {                                               /* styles any element that user has rolled over with mouse */
+    
+}                                    
+a:active {                                              /* styles any element usually an 'a' element that has JUST been clicked on by the user */
+                                       
+}
+/* heading styles */
+h1 {
+    display: inline-block;
+    margin: 0;   
+    font-size: 3.5em;
+    color: #333A56;
+    background: #F7F5E6;
+    font-weight: bold;
+    width: 100%; 
+    border-radius: 6px;
+}
+h2 {
+    font-size: 2.5em;
+    color: #333A56;
+    font-weight: bold;
+    padding: 5px;
+}
+/* unordered list styles */
+ul {
+    border: 3px solid;
+    color: #333A56;
+    font-weight: 700;
+    font-style: italic;
+    line-height: 2em;
+    padding: 20px;
+    }
+/* paragraph styles */
+p {
+   line-height: 2m;
+   font-size: 1.5em;
+   color: #333A56;
+   padding: 20x;
+   margin: 10px;
+}
+/* class selectors */           /* Moves main element away from the sides of the container */ 
+.main {
+    margin: 2em 6em;
+    background: #F7F5E6; 
+    text-align: center;
+    border-radius: 8px;
+    padding: 5px;
+}
+.container {
+    width: 100em;
+    margin-left: auto;          /* This centres the container in the viewport */
+    margin-right: auto;    
+}
+.header {
+    padding: 2em;
+}
+.announcements {
+    color: #333A56;
+    background: #E8E8E8;
+    font-size: 110%;
+    font-weight: 900;
+    font-style: italic;
+    text-align: center;
+    line-height: 2em;
+    padding: 20px;
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 6px;
+}
+.homepage {
+  display: inline-block;
+  max-width:520px;
+  max-height:240px;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding:5px; 
+  width: auto;
+  height: auto;
+  border-radius: 8px;
+} 
+}
+.trainers {
+  display:inline;
+  max-width:520px;
+  max-height:240px;
+  margin-left: auto;
+  margin-right: auto;
+  padding:5px;  
+  border-radius: 8px;
+} 
+ .trainerList {
+    display:inline-block; 
+    color: #333A56;
+    background: #E8E8E8;
+    font-size: 110%;
+    font-weight: 900;
+    font-style: italic;
+    text-align: left;
+    line-height: 2em;
+    padding: 20px;
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 8px;
+}
+.contactlist {
+    color: #333A56;
+    background: #E8E8E8;
+    font-size: 110%;
+    font-weight: 900;
+    font-style: italic;
+    text-align: left;
+    line-height: 2em;
+    padding: 10px;
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 8px;
+}     
+img {
+  display: inline-block;
+  max-width:260px;
+  max-height:120px;
+  margin: 0.5em;    
+  width: auto;
+  height: auto;
+  border-radius: 8px;
+}    
+/* id styles */
+#footer {
+    color: #52658F;
+    background: #E8E8E8;
+    font-size: 0.6em;
+    text-align: left;
+    width: 28em;
+    padding: 1px;
+    border-radius: 4px;
+
+}
+
+/* adjacent sibling selector
+h1 + h2 {                     Only affects h2 that comes directly after h1
+    margin-top: 2em; 
+
+}
+*/
